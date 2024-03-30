@@ -24,7 +24,7 @@ const updateUser = async (req, res, next) => {
     if (!updatedUser) {
       throw res.status(500).send("Error updating students");
     }
-    console.log("updatedUser", updatedUser);
+
     res.status(200).json({ status: "udated ", code: 200, data: updatedUser });
   } catch (err) {
     next(err);
